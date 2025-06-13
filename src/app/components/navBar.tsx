@@ -29,7 +29,7 @@ function NavBar() {
           <a href="#experience" className="hover:text-blue-500 transition">
             Experience
           </a>
-          <a href="#educationt" className="hover:text-blue-500 transition">
+          <a href="#education" className="hover:text-blue-500 transition">
             Education
           </a>
           <a href="#contract" className="hover:text-blue-500 transition">

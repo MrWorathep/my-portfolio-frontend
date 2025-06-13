@@ -7,9 +7,10 @@ type Props = {
   experiences: Experience[];
 };
 
-export default function ExperienceList({ experiences }: Props) {
+export default function ExperiencePage({ experiences }: Props) {
   return (
-    <div>
+    <div className="p-2 md:p-6">
+      <h1 className="mt-3 mb-3 text-4xl font-bold">Experience</h1>
       {experiences
         .slice()
         .reverse()
