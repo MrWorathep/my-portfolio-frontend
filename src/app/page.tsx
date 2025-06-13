@@ -1,13 +1,13 @@
 "use client";
 import { useEffect, useState } from "react";
-import HomePage from "./page/home/page";
+import HomePage from "./page/home/HomePage";
 import NavBar from "./components/navBar";
-import ProjectPage from "./page/project/page";
-import AboutPage from "./page/about/page";
+import ProjectPage from "./page/project/ProjectPage";
+import AboutPage from "./page/about/AboutPage";
 import SkillsPage from "./page/skills/page";
-import ExperiencePage from "./page/experience/page";
-import EducationPage from "./page/education/page";
-import ContractPage from "./page/contract/page";
+import ExperiencePage from "./page/experience/ExperiencePage";
+import EducationPage from "./page/education/EducationPage";
+import ContractPage from "./page/contract/ContactPage";
 import { fetchProjects, Project } from "@/services/projectService";
 import { fetchExperiences, Experience } from "@/services/experienceService";
 

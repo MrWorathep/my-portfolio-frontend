@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { Experience } from "@/services/experienceService";
 
@@ -5,10 +7,9 @@ type Props = {
   experiences: Experience[];
 };
 
-export default function ExperiencePage({ experiences }: Props) {
+export default function ExperienceList({ experiences }: Props) {
   return (
-    <div className="p-2 md:p-6">
-      <h1 className="mt-3 mb-3 text-4xl font-bold">Experience</h1>
+    <div>
       {experiences
         .slice()
         .reverse()
