@@ -24,7 +24,7 @@ export default function Home() {
         fetchExperiences(),
       ]);
       setProjects(projectsData);
-      setExperiences(experiencesData); // ✅
+      setExperiences(experiencesData);
       setIsLoading(false);
     }
     loadData();
