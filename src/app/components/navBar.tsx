@@ -99,7 +99,7 @@ function NavBar() {
           Experience
         </a>
         <a
-          href="#educationt"
+          href="#education"
           className="block hover:text-blue-500 transition"
           onClick={() => setMenuOpen(false)}
         >
