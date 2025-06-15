@@ -20,78 +20,89 @@ export default function ProjectPage({ projects }: ProjectPageProps) {
   };
 
   if (!projects.length) {
-    return <div>ยังไม่มีโปรเจกต์</div>;
+    return <div className="text-white">ยังไม่มีโปรเจกต์</div>;
   }
 
   return (
-    <div className="p-2 md:p-6">
+    <div className="p-4 md:p-6 max-w-[1440px] mx-auto">
       <motion.h1
-        className="mt-3 mb-3 text-4xl font-bold"
+        className="text-4xl font-extrabold text-white text-center mb-10"
         initial={{ x: -200, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.7 }}
       >
-        Project
+        🚀 Projects
       </motion.h1>
-      {projects
-        .slice()
-        .reverse()
-        .map((project) => (
-          <motion.div
-            key={project._id}
-            className="mb-6 p-6 border border-gray-500 rounded-lg shadow-lg bg-[#222a44]"
-            initial={{ x: -200, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.7 }}
-          >
-            <div className="flex justify-center">
-              <div className="font-semibold text-2xl">
-                {project.projectName}
-              </div>
-            </div>
-            <div>
-              <p className="text-xl mt-2 font-bold">รายละเอียดของโปรเจกต์ :</p>
-              <p>{project.detail}</p>
-            </div>
 
-            {project.images.length > 0 && (
-              <div className="w-full flex flex-col items-center gap-3 mt-3">
-                <div className="w-full max-w-[500px] aspect-video relative">
-                  <Image
-                    src={project.images[0]}
-                    alt={project.projectName}
-                    fill
-                    className="object-cover rounded duration-300"
-                    sizes="(max-width: 768px) 100vw, 500px"
-                    loading="eager"
-                    priority
-                  />
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
+        {projects
+          .slice()
+          .reverse()
+          .map((project) => (
+            <motion.div
+              key={project._id}
+              className="h-full"
+              initial={{ x: -200, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.7 }}
+            >
+              <div className="bg-[#1f2640] border border-gray-600 rounded-2xl shadow-xl p-6 hover:scale-[1.02] transition-transform duration-300 text-white flex flex-col h-full">
+                <h2 className="text-2xl font-bold text-center mb-4">
+                  {project.projectName}
+                </h2>
+                <p className="text-lg font-semibold">
+                  📄 รายละเอียดของโปรเจกต์ :
+                </p>
+                <p className="mb-4">{project.detail}</p>
+                {project.images.length > 0 && (
+                  <div className="w-full mt-4">
+                    <div className="w-full aspect-video relative rounded-xl overflow-hidden mb-4">
+                      <Image
+                        src={project.images[0]}
+                        alt={project.projectName}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 600px"
+                        loading="eager"
+                        priority
+                      />
+                    </div>
+                  </div>
+                )}
+                <div className="mt-6">
+                  <p className="text-lg font-semibold mb-1">
+                    🔧 รายละเอียดการพัฒนา
+                  </p>
+                  <div className="mb-2 flex flex-wrap">
+                    <span className="font-semibold mr-2">บทบาทการทำงาน:</span>
+                    <span>{project.role}</span>
+                  </div>
+                  <div className="flex flex-wrap">
+                    <span className="font-semibold mr-2">
+                      เครื่องมือและเทคโนโลยีที่ใช้:
+                    </span>
+                    <span className="whitespace-pre-line break-words">
+                      {project.developmentDetails}
+                    </span>
+                  </div>
                 </div>
-                <button
-                  onClick={() => openLightbox(project.images)}
-                  className="px-3 py-1 bg-blue-500 rounded hover:bg-blue-600 duration-500 cursor-pointer"
-                >
-                  ดูรูปทั้งหมด ({project.images.length} รูป)
-                </button>
+                <div className="mt-auto pt-6">
+                  {project.images.length > 0 && (
+                    <div className="flex justify-center">
+                      <button
+                        onClick={() => openLightbox(project.images)}
+                        className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-all duration-300 cursor-pointer"
+                      >
+                        ดูรูปทั้งหมด ({project.images.length} รูป)
+                      </button>
+                    </div>
+                  )}
+                </div>
               </div>
-            )}
+            </motion.div>
+          ))}
+      </div>
 
-            <div className="mt-4 text-xl font-bold">🔧 รายละเอียดการพัฒนา</div>
-            <div className="mt-2 flex flex-wrap">
-              <div className="font-semibold mr-2">บทบาทการทำงาน :</div>
-              <div className="break-words">{project.role}</div>
-            </div>
-
-            <div className="mt-2 flex flex-wrap">
-              <div className="font-semibold mr-2">
-                เครื่องมือและเทคโนโลยีที่ใช้ :
-              </div>
-              <div className="break-words whitespace-pre-line">
-                {project.developmentDetails}
-              </div>
-            </div>
-          </motion.div>
-        ))}
       <Lightbox
         open={lightboxOpen}
         close={() => setLightboxOpen(false)}

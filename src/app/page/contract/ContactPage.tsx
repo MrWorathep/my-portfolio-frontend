@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 function ContactPage() {
   return (
     <motion.div
-      className="p-2 md:p-6 text-white bg-[#171c28]"
+      className="p-2 md:p-6 text-white bg-[#171c28] max-w-[1440px] mx-auto"
       initial={{ x: -200, opacity: 0 }}
       whileInView={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.7 }}

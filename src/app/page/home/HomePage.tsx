@@ -4,13 +4,13 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="mt-7 p-2 md:p-6">
+    <main className="mt-7 p-2 md:p-6 max-w-[1440px] mx-auto">
       <h1 className="text-6xl font-semibold mt-3 mb-3">
         Hello, I&apos;m Worathep
       </h1>
       <div className="flex flex-wrap md:flex-nowrap m-1 gap-2">
         <motion.div
-          className="text-3xl p-3 leading-12 flex-1 min-w-[300px]"
+          className="text-3xl p-3 leading-12 flex-1 min-w-[300px] text-gray-200"
           initial={{ scale: 0 }}
           whileInView={{ scale: 1 }}
           transition={{ duration: 0.6 }}
@@ -33,6 +33,7 @@ export default function Home() {
               height={500}
               className="object-contain h-full rounded-xl"
               priority
+              loading="eager"
             />
           </div>
         </motion.div>
