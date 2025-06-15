@@ -9,7 +9,7 @@ function NavBar() {
       <div className="flex justify-between w-full">
         <div className="monsieur-la-doulaise-regular text-5xl font-bold w-1/3">
           <a
-            className="cursor-pointer hover:text-blue-500 transition"
+            className="block w-full cursor-pointer hover:text-blue-500 transition"
             onClick={() => window.location.reload()}
           >
             Worathep

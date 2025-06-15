@@ -11,8 +11,8 @@ export default function Home() {
       <div className="flex flex-wrap md:flex-nowrap m-1 gap-2">
         <motion.div
           className="text-3xl p-3 leading-12 flex-1 min-w-[300px]"
-          initial={{ opacity: 0, x: -200 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
           transition={{ duration: 0.6 }}
         >
           a Software Engineer who builds websites tailored to real user needs. I
@@ -21,8 +21,8 @@ export default function Home() {
         </motion.div>
         <motion.div
           className="flex justify-center items-center flex-1 min-w-[300px]"
-          initial={{ opacity: 0, x: 200 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
           transition={{ duration: 0.6 }}
         >
           <div className="p-3 max-w-[400px] max-h-[400px] w-full">

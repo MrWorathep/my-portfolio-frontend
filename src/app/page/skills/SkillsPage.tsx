@@ -93,17 +93,17 @@ function SkillsPage() {
     <main className="p-2 md:p-6">
       <motion.div
         className="flex flex-col gap-4 flex-1 mx-auto"
-        initial={{ opacity: 0, x: -200 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6 }}
+        initial={{ x: -200, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.7 }}
       >
         <h1 className="text-4xl font-bold mb-4">Skills</h1>
         <div className="text-2xl font-semibold mb-2">💻 Hard Skills :</div>
 
         {Object.entries(skills).map(([section, skillList], sectionIdx) => (
           <div key={sectionIdx}>
-            <div className="text-xl mb-2 capitalize">
-              {section.replace(/([a-z])([A-Z])/g, "$1 $2")}
+            <div className="text-xl mb-2">
+              {section.charAt(0).toUpperCase() + section.slice(1)}
             </div>
             {skillList.map((skill, idx) => (
               <div key={idx} className="flex items-center gap-4 flex-wrap mb-2">
@@ -124,9 +124,9 @@ function SkillsPage() {
       </motion.div>
       <motion.div
         className="w-full flex gap-2 flex-wrap justify-between mt-4"
-        initial={{ opacity: 0, x: 200 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6 }}
+        initial={{ x: -200, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.7 }}
       >
         <div className="p-3">
           <div className="text-2xl mb-2 font-semibold">🤝 Soft Skills :</div>

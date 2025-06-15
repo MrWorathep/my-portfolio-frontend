@@ -12,9 +12,9 @@ export default function ExperiencePage({ experiences }: Props) {
     <div className="p-2 md:p-6">
       <motion.h1
         className="mt-3 mb-3 text-4xl font-bold"
-        initial={{ opacity: 0, x: -200 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6 }}
+        initial={{ x: -200, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.7 }}
       >
         Experience
       </motion.h1>
@@ -25,9 +25,9 @@ export default function ExperiencePage({ experiences }: Props) {
           <motion.div
             className="flex flex-col gap-2 mt-4 justify-center"
             key={exp._id}
-            initial={{ opacity: 0, x: -200 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ x: -200, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.7 }}
           >
             <h2 className="text-xl font-semibold">{exp.title}</h2>
             <div className="w-full max-w-[500px] aspect-video relative flex justify-center">

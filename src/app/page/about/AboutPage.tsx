@@ -6,9 +6,9 @@ function AboutPage() {
   return (
     <motion.div
       className="p-2 md:p-6"
-      initial={{ opacity: 0, x: 200 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.6 }}
+      initial={{ x: -200, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.7 }}
     >
       <div className="flex flex-col lg:flex-row gap-6">
         <div className="w-full lg:w-1/2">

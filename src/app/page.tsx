@@ -4,7 +4,7 @@ import HomePage from "./page/home/HomePage";
 import NavBar from "./components/navBar";
 import ProjectPage from "./page/project/ProjectPage";
 import AboutPage from "./page/about/AboutPage";
-import SkillsPage from "./page/skills/page";
+import SkillsPage from "./page/skills/SkillsPage";
 import ExperiencePage from "./page/experience/ExperiencePage";
 import EducationPage from "./page/education/EducationPage";
 import ContractPage from "./page/contract/ContactPage";
