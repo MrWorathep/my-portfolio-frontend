@@ -1,9 +1,16 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 function EducationPage() {
   return (
-    <div className="p-2 md:p-6">
+    <motion.div
+      className="p-2 md:p-6"
+      initial={{ opacity: 0, x: 200 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.6 }}
+    >
       <h1 className="mt-3 mb-3 text-4xl font-bold">Education</h1>
       <div className="flex flex-wrap gap-2">
         <div className="flex flex-col flex-1 min-w-[300px] p-3 items-start">
@@ -51,7 +58,7 @@ function EducationPage() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

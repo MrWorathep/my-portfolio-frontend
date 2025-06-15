@@ -1,18 +1,30 @@
-import React from "react";
+"use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
-function HomePage() {
+
+export default function Home() {
   return (
     <main className="mt-7 p-2 md:p-6">
       <h1 className="text-6xl font-semibold mt-3 mb-3">
         Hello, I&apos;m Worathep
       </h1>
       <div className="flex flex-wrap md:flex-nowrap m-1 gap-2">
-        <div className="text-3xl p-3 leading-12 flex-1 min-w-[300px]">
+        <motion.div
+          className="text-3xl p-3 leading-12 flex-1 min-w-[300px]"
+          initial={{ opacity: 0, x: -200 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+        >
           a Software Engineer who builds websites tailored to real user needs. I
           focus on creating web experiences that are fast, responsive, and
           aligned with what users truly want.
-        </div>
-        <div className="flex justify-center items-center flex-1 min-w-[300px]">
+        </motion.div>
+        <motion.div
+          className="flex justify-center items-center flex-1 min-w-[300px]"
+          initial={{ opacity: 0, x: 200 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+        >
           <div className="p-3 max-w-[400px] max-h-[400px] w-full">
             <Image
               src="/images/Worathep.png"
@@ -23,10 +35,8 @@ function HomePage() {
               priority
             />
           </div>
-        </div>
+        </motion.div>
       </div>
     </main>
   );
 }
-
-export default HomePage;

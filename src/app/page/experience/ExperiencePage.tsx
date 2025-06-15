@@ -1,7 +1,7 @@
 "use client";
-
 import Image from "next/image";
 import { Experience } from "@/services/experienceService";
+import { motion } from "framer-motion";
 
 type Props = {
   experiences: Experience[];
@@ -10,14 +10,24 @@ type Props = {
 export default function ExperiencePage({ experiences }: Props) {
   return (
     <div className="p-2 md:p-6">
-      <h1 className="mt-3 mb-3 text-4xl font-bold">Experience</h1>
+      <motion.h1
+        className="mt-3 mb-3 text-4xl font-bold"
+        initial={{ opacity: 0, x: -200 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        Experience
+      </motion.h1>
       {experiences
         .slice()
         .reverse()
         .map((exp) => (
-          <div
+          <motion.div
             className="flex flex-col gap-2 mt-4 justify-center"
             key={exp._id}
+            initial={{ opacity: 0, x: -200 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
           >
             <h2 className="text-xl font-semibold">{exp.title}</h2>
             <div className="w-full max-w-[500px] aspect-video relative flex justify-center">
@@ -48,7 +58,7 @@ export default function ExperiencePage({ experiences }: Props) {
                 ))}
               </ul>
             </div>
-          </div>
+          </motion.div>
         ))}
     </div>
   );

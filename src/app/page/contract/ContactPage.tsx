@@ -1,8 +1,15 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 
 function ContactPage() {
   return (
-    <div className="p-2 md:p-6 text-white bg-[#171c28]">
+    <motion.div
+      className="p-2 md:p-6 text-white bg-[#171c28]"
+      initial={{ opacity: 0, x: -200 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.6 }}
+    >
       <h1 className="mt-3 mb-3 text-4xl font-bold">Contact</h1>
       <div className="space-y-2">
         <div className="flex items-center gap-2">
@@ -49,7 +56,7 @@ function ContactPage() {
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
