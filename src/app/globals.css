@@ -21,10 +21,13 @@ body {
 }
 
 html {
-  overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
   margin: 0;
   padding: 0;
   width: 100%;
+}
+div,
+main {
+  overflow-x: hidden;
 }

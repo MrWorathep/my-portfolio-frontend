@@ -76,7 +76,7 @@ const skills = {
     {
       icon: <SiMongodb className="w-6 h-6 text-green-500" />,
       label: "MongoDB",
-      level: "60%",
+      level: "50%",
     },
   ],
   tools: [
