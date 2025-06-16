@@ -10,14 +10,9 @@ type Props = {
 const ExperiencePage: React.FC<Props> = ({ experiences }) => {
   return (
     <div className="p-4 md:p-10">
-      <motion.h1
-        className="mb-8 text-4xl font-extrabold text-white text-center"
-        initial={{ x: -200, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.7 }}
-      >
+      <h1 className="mb-8 text-4xl font-extrabold text-white text-center">
         💼 Experience
-      </motion.h1>
+      </h1>
 
       <div className="flex flex-wrap justify-center gap-6">
         {experiences

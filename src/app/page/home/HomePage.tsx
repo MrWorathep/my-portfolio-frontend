@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-// ถ้าไม่มี props ก็ลบ Props ออกไปได้
 const Home: React.FC = () => {
   return (
     <main className="mt-7 p-2 md:p-6 max-w-[1440px] mx-auto">

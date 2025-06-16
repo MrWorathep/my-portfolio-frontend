@@ -90,76 +90,78 @@ const skills = {
 
 const SkillsPage: React.FC = () => {
   return (
-    <motion.main
-      className="p-4 md:p-10 max-w-5xl mx-auto"
-      initial={{ x: -200, opacity: 0 }}
-      whileInView={{ x: 0, opacity: 1 }}
-      transition={{ duration: 0.7 }}
-    >
+    <main className="p-4 md:p-10 max-w-5xl mx-auto">
       <h1 className="text-4xl font-extrabold text-white text-center mb-10">
         🛠 Skills
       </h1>
-      <div className="bg-[#222a44] rounded-2xl border border-gray-600 shadow-xl p-8 hover:scale-[1.02] transition-transform duration-300">
-        {Object.entries(skills).map(([section, skillList], sectionIdx) => (
-          <section key={sectionIdx} className="mb-10 last:mb-0">
-            <h2 className="text-2xl font-bold text-white mb-6 capitalize">
-              {section}
-            </h2>
+      <motion.div
+        initial={{ x: -200, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.7 }}
+      >
+        <div className="bg-[#222a44] rounded-2xl border border-gray-600 shadow-xl p-8 hover:scale-[1.02] transition-transform duration-300">
+          {Object.entries(skills).map(([section, skillList], sectionIdx) => (
+            <section key={sectionIdx} className="mb-10 last:mb-0">
+              <h2 className="text-2xl font-bold text-white mb-6 capitalize">
+                {section}
+              </h2>
 
-            <div className="flex flex-col gap-3 w-full">
-              {skillList.map((skill, idx) => (
-                <div key={idx} className="flex items-center gap-4 flex-wrap">
-                  <div className="flex items-center gap-2 min-w-[200px]">
-                    {skill.icon}
-                    <span className="text-white">{skill.label}</span>
+              <div className="flex flex-col gap-3 w-full">
+                {skillList.map((skill, idx) => (
+                  <div key={idx} className="flex items-center gap-4 flex-wrap">
+                    <div className="flex items-center gap-2 min-w-[200px]">
+                      {skill.icon}
+                      <span className="text-white">{skill.label}</span>
+                    </div>
+                    <div className="bg-white/20 rounded-xl flex-grow h-5 min-w-[200px]">
+                      <div
+                        className="h-full rounded-xl bg-cyan-400/80 transition-all duration-500"
+                        style={{ width: skill.level }}
+                      />
+                    </div>
                   </div>
-                  <div className="bg-white/20 rounded-xl flex-grow h-5 min-w-[200px]">
-                    <div
-                      className="h-full rounded-xl bg-cyan-400/80 transition-all duration-500"
-                      style={{ width: skill.level }}
-                    />
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
+            </section>
+          ))}
+
+          {/* Soft Skills, Languages, Software Tools */}
+          <section className="flex flex-wrap gap-8">
+            <div className="flex-1 min-w-[250px] bg-[#1f2640] p-6 rounded-xl border border-gray-600 text-white">
+              <h3 className="text-2xl font-semibold mb-4">🤝 Soft Skills</h3>
+              <ul className="list-disc pl-5 space-y-2">
+                <li>Teamwork and collaboration</li>
+                <li>Ability to work under pressure</li>
+                <li>Problem-solving mindset</li>
+                <li>Willingness to learn new technologies</li>
+              </ul>
+            </div>
+
+            <div className="flex-1 min-w-[250px] bg-[#1f2640] p-6 rounded-xl border border-gray-600 text-white">
+              <h3 className="text-2xl font-semibold mb-4">🌐 Languages</h3>
+              <ul className="list-disc pl-5 space-y-2">
+                <li>
+                  Thai : Native (fluent in both spoken and written
+                  communication)
+                </li>
+                <li>
+                  English : Basic (able to read technical documents with limited
+                  understanding)
+                </li>
+              </ul>
+            </div>
+
+            <div className="flex-1 min-w-[250px] bg-[#1f2640] p-6 rounded-xl border border-gray-600 text-white">
+              <h3 className="text-2xl font-semibold mb-4">🧰 Software Tools</h3>
+              <ul className="list-disc pl-5 space-y-2">
+                <li>IDEs: Visual Studio Code</li>
+                <li>Communication: Discord, Microsoft Teams, Zoom</li>
+              </ul>
             </div>
           </section>
-        ))}
-
-        {/* Soft Skills, Languages, Software Tools */}
-        <section className="flex flex-wrap gap-8">
-          <div className="flex-1 min-w-[250px] bg-[#1f2640] p-6 rounded-xl border border-gray-600 text-white">
-            <h3 className="text-2xl font-semibold mb-4">🤝 Soft Skills</h3>
-            <ul className="list-disc pl-5 space-y-2">
-              <li>Teamwork and collaboration</li>
-              <li>Ability to work under pressure</li>
-              <li>Problem-solving mindset</li>
-              <li>Willingness to learn new technologies</li>
-            </ul>
-          </div>
-
-          <div className="flex-1 min-w-[250px] bg-[#1f2640] p-6 rounded-xl border border-gray-600 text-white">
-            <h3 className="text-2xl font-semibold mb-4">🌐 Languages</h3>
-            <ul className="list-disc pl-5 space-y-2">
-              <li>
-                Thai : Native (fluent in both spoken and written communication)
-              </li>
-              <li>
-                English : Basic (able to read technical documents with limited
-                understanding)
-              </li>
-            </ul>
-          </div>
-
-          <div className="flex-1 min-w-[250px] bg-[#1f2640] p-6 rounded-xl border border-gray-600 text-white">
-            <h3 className="text-2xl font-semibold mb-4">🧰 Software Tools</h3>
-            <ul className="list-disc pl-5 space-y-2">
-              <li>IDEs: Visual Studio Code</li>
-              <li>Communication: Discord, Microsoft Teams, Zoom</li>
-            </ul>
-          </div>
-        </section>
-      </div>
-    </motion.main>
+        </div>
+      </motion.div>
+    </main>
   );
 };
 

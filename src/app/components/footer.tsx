@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
             Facebook
           </a>
           <a
-            href="/resume.pdf"
+            href="files/Resume-Worathep.thim.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-white flex items-center gap-2 transition duration-300"

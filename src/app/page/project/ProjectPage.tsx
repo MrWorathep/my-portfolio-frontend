@@ -25,14 +25,9 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ projects }) => {
 
   return (
     <div className="p-4 md:p-6 max-w-[1440px] mx-auto">
-      <motion.h1
-        className="text-4xl font-extrabold text-white text-center mb-10"
-        initial={{ x: -200, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.7 }}
-      >
+      <h1 className="text-4xl font-extrabold text-white text-center mb-10">
         🚀 Projects
-      </motion.h1>
+      </h1>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
         {projects
