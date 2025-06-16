@@ -63,7 +63,7 @@ const NavBar: React.FC = () => {
       {/* Mobile */}
       <nav
         className={classNames(
-          "lg:hidden mt-4 flex flex-col gap-4 px-4 overflow-hidden transition-all duration-300 ease-in-out flex-1",
+          "lg:hidden flex flex-col gap-4 px-4 overflow-hidden transition-all duration-300 ease-in-out flex-1",
           {
             "max-h-screen opacity-100": menuOpen,
             "max-h-0 opacity-0": !menuOpen,
