@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-function EducationPage() {
+const EducationPage: React.FC = () => {
   return (
     <div className="p-4 md:p-10 max-w-[1440px] mx-auto">
       <h1 className="mb-8 text-4xl font-extrabold text-white text-center">
@@ -77,6 +77,6 @@ function EducationPage() {
       </div>
     </div>
   );
-}
+};
 
 export default EducationPage;

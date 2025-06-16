@@ -7,9 +7,9 @@ import AboutPage from "./page/about/AboutPage";
 import SkillsPage from "./page/skills/SkillsPage";
 import ExperiencePage from "./page/experience/ExperiencePage";
 import EducationPage from "./page/education/EducationPage";
-import ContractPage from "./page/contract/ContactPage";
 import { fetchProjects, Project } from "@/services/projectService";
 import { fetchExperiences, Experience } from "@/services/experienceService";
+import Footer from "./components/footer";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -40,10 +40,8 @@ export default function Home() {
 
   return (
     <div className="w-full">
-      <div className="pt-6 pb-6 sm:pt-12 sm:pb-12">
-        <div className="pb-6">
-          <NavBar />
-        </div>
+      <div className="pt-6 sm:pt-12">
+        <NavBar />
         <div id="home" className="pt-12">
           <HomePage />
         </div>
@@ -62,8 +60,8 @@ export default function Home() {
         <div id="education" className="pt-12">
           <EducationPage />
         </div>
-        <div id="contract" className="pt-12">
-          <ContractPage />
+        <div id="contract">
+          <Footer />
         </div>
       </div>
     </div>

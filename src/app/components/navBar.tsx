@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import classNames from "classnames";
 
-function NavBar() {
+const NavBar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 w-screen z-50 shadow-md bg-[#171c28] p-8">
+    <header className="fixed top-0 left-0 right-0 w-screen z-50 shadow-md bg-neutral-900 text-gray-300 p-6 border-b border-neutral-800">
       <div className="flex justify-between w-full">
         <div className="monsieur-la-doulaise-regular text-5xl font-bold w-1/3">
           <a
@@ -115,6 +115,6 @@ function NavBar() {
       </nav>
     </header>
   );
-}
+};
 
 export default NavBar;

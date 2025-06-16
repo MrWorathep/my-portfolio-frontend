@@ -2,10 +2,11 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-export default function Home() {
+// ถ้าไม่มี props ก็ลบ Props ออกไปได้
+const Home: React.FC = () => {
   return (
     <main className="mt-7 p-2 md:p-6 max-w-[1440px] mx-auto">
-      <h1 className="text-6xl font-semibold mt-3 mb-3">
+      <h1 className="text-6xl font-semibold mt-3 mb-3 text-white">
         Hello, I&apos;m Worathep
       </h1>
       <div className="flex flex-wrap md:flex-nowrap m-1 gap-2">
@@ -40,4 +41,6 @@ export default function Home() {
       </div>
     </main>
   );
-}
+};
+
+export default Home;

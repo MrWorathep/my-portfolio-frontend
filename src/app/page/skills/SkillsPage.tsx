@@ -88,7 +88,7 @@ const skills = {
   ],
 };
 
-export default function SkillsPage() {
+const SkillsPage: React.FC = () => {
   return (
     <motion.main
       className="p-4 md:p-10 max-w-5xl mx-auto"
@@ -127,7 +127,7 @@ export default function SkillsPage() {
 
         {/* Soft Skills, Languages, Software Tools */}
         <section className="flex flex-wrap gap-8">
-          <div className="flex-1 min-w-[280px] bg-[#1f2640] p-6 rounded-xl border border-gray-600 text-white">
+          <div className="flex-1 min-w-[250px] bg-[#1f2640] p-6 rounded-xl border border-gray-600 text-white">
             <h3 className="text-2xl font-semibold mb-4">🤝 Soft Skills</h3>
             <ul className="list-disc pl-5 space-y-2">
               <li>Teamwork and collaboration</li>
@@ -137,7 +137,7 @@ export default function SkillsPage() {
             </ul>
           </div>
 
-          <div className="flex-1 min-w-[280px] bg-[#1f2640] p-6 rounded-xl border border-gray-600 text-white">
+          <div className="flex-1 min-w-[250px] bg-[#1f2640] p-6 rounded-xl border border-gray-600 text-white">
             <h3 className="text-2xl font-semibold mb-4">🌐 Languages</h3>
             <ul className="list-disc pl-5 space-y-2">
               <li>
@@ -150,7 +150,7 @@ export default function SkillsPage() {
             </ul>
           </div>
 
-          <div className="flex-1 min-w-[280px] bg-[#1f2640] p-6 rounded-xl border border-gray-600 text-white">
+          <div className="flex-1 min-w-[250px] bg-[#1f2640] p-6 rounded-xl border border-gray-600 text-white">
             <h3 className="text-2xl font-semibold mb-4">🧰 Software Tools</h3>
             <ul className="list-disc pl-5 space-y-2">
               <li>IDEs: Visual Studio Code</li>
@@ -161,4 +161,6 @@ export default function SkillsPage() {
       </div>
     </motion.main>
   );
-}
+};
+
+export default SkillsPage;

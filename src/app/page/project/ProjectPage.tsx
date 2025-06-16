@@ -10,7 +10,7 @@ type ProjectPageProps = {
   projects: Project[];
 };
 
-export default function ProjectPage({ projects }: ProjectPageProps) {
+const ProjectPage: React.FC<ProjectPageProps> = ({ projects }) => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxImages, setLightboxImages] = useState<{ src: string }[]>([]);
 
@@ -110,4 +110,6 @@ export default function ProjectPage({ projects }: ProjectPageProps) {
       />
     </div>
   );
-}
+};
+
+export default ProjectPage;

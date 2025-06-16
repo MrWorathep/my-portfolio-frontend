@@ -7,7 +7,7 @@ type Props = {
   experiences: Experience[];
 };
 
-export default function ExperiencePage({ experiences }: Props) {
+const ExperiencePage: React.FC<Props> = ({ experiences }) => {
   return (
     <div className="p-4 md:p-10">
       <motion.h1
@@ -30,12 +30,12 @@ export default function ExperiencePage({ experiences }: Props) {
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.7 }}
             >
-              <div className="p-6 border border-gray-600 rounded-2xl shadow-xl bg-[#222a44] hover:scale-[1.02] transition-transform duration-300 h-full">
+              <div className="p-6 border border-gray-600 rounded-2xl shadow-xl bg-[#222a44] hover:scale-[1.02] transition-transform duration-300 h-full max-w-[500px]">
                 <h2 className="text-2xl font-bold text-white mb-4 text-center">
                   {exp.title}
                 </h2>
 
-                <div className="w-full aspect-video relative mx-auto mb-4 max-w-[500px]">
+                <div className="w-full aspect-video relative mx-auto mb-4">
                   <Image
                     src={exp.image}
                     alt={exp.title}
@@ -46,7 +46,7 @@ export default function ExperiencePage({ experiences }: Props) {
                   />
                 </div>
 
-                <div className="text-gray-200 text-base leading-7 space-y-2 max-w-[500px] mx-auto text-left">
+                <div className="text-gray-200 text-base leading-7 space-y-2 text-left">
                   <div className="flex flex-wrap gap-2 items-center">
                     <span className="font-semibold text-white">
                       📌 Position:
@@ -76,4 +76,6 @@ export default function ExperiencePage({ experiences }: Props) {
       </div>
     </div>
   );
-}
+};
+
+export default ExperiencePage;

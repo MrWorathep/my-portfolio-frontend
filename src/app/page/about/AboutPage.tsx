@@ -1,8 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-
-function AboutPage() {
+const AboutPage: React.FC = () => {
   return (
     <div className="p-4 md:p-10">
       <motion.div
@@ -37,6 +36,6 @@ function AboutPage() {
       </motion.div>
     </div>
   );
-}
+};
 
 export default AboutPage;
