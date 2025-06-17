@@ -66,9 +66,9 @@ const EducationPage: React.FC = () => {
             </div>
             <div className="text-gray-200 space-y-1 text-base leading-7 text-center">
               <div className="font-semibold text-lg text-white">
-                Non-Formal Education – Secondary Level
+                Warin Chamrap District NFE Center
               </div>
-              <div>Warin Chamrap District NFE Center</div>
+              <div>Upper Secondary Level</div>
               <div>(2017 - 2019)</div>
               <div>GPA: 2.05</div>
             </div>
