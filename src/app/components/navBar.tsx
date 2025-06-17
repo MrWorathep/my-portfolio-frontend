@@ -10,7 +10,7 @@ const NavBar: React.FC = () => {
         <div className="monsieur-la-doulaise-regular text-5xl font-bold w-1/3">
           <a
             className="block w-full cursor-pointer hover:text-blue-500 transition"
-            onClick={() => window.location.reload()}
+            href="#home"
           >
             Worathep
           </a>

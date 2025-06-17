@@ -91,7 +91,7 @@ const skills = {
 const SkillsPage: React.FC = () => {
   return (
     <main className="p-4 md:p-10 max-w-5xl mx-auto">
-      <h1 className="text-4xl font-extrabold text-white text-center mb-10">
+      <h1 className="text-2xl md:text-4xl font-extrabold text-white text-center mb-8">
         🛠 Skills
       </h1>
       <motion.div
@@ -102,7 +102,7 @@ const SkillsPage: React.FC = () => {
         <div className="bg-[#222a44] rounded-2xl border border-gray-600 shadow-xl p-8 hover:scale-[1.02] transition-transform duration-300">
           {Object.entries(skills).map(([section, skillList], sectionIdx) => (
             <section key={sectionIdx} className="mb-10 last:mb-0">
-              <h2 className="text-2xl font-bold text-white mb-6 capitalize">
+              <h2 className="text-xl md:text-2xl font-bold text-white mb-6 capitalize">
                 {section}
               </h2>
 
@@ -128,7 +128,9 @@ const SkillsPage: React.FC = () => {
           {/* Soft Skills, Languages, Software Tools */}
           <section className="flex flex-wrap gap-8">
             <div className="flex-1 min-w-[250px] bg-[#1f2640] p-6 rounded-xl border border-gray-600 text-white">
-              <h3 className="text-2xl font-semibold mb-4">🤝 Soft Skills</h3>
+              <h3 className="text-xl md:text-2xl font-semibold mb-4">
+                🤝 Soft Skills
+              </h3>
               <ul className="list-disc pl-5 space-y-2">
                 <li>Teamwork and collaboration</li>
                 <li>Ability to work under pressure</li>
@@ -138,7 +140,9 @@ const SkillsPage: React.FC = () => {
             </div>
 
             <div className="flex-1 min-w-[250px] bg-[#1f2640] p-6 rounded-xl border border-gray-600 text-white">
-              <h3 className="text-2xl font-semibold mb-4">🌐 Languages</h3>
+              <h3 className="text-xl md:text-2xl font-semibold mb-4">
+                🌐 Languages
+              </h3>
               <ul className="list-disc pl-5 space-y-2">
                 <li>
                   Thai : Native (fluent in both spoken and written
@@ -152,7 +156,9 @@ const SkillsPage: React.FC = () => {
             </div>
 
             <div className="flex-1 min-w-[250px] bg-[#1f2640] p-6 rounded-xl border border-gray-600 text-white">
-              <h3 className="text-2xl font-semibold mb-4">🧰 Software Tools</h3>
+              <h3 className="text-xl md:text-2xl font-semibold mb-4">
+                🧰 Software Tools
+              </h3>
               <ul className="list-disc pl-5 space-y-2">
                 <li>IDEs: Visual Studio Code</li>
                 <li>Communication: Discord, Microsoft Teams, Zoom</li>

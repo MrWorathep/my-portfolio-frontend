@@ -10,7 +10,7 @@ type Props = {
 const ExperiencePage: React.FC<Props> = ({ experiences }) => {
   return (
     <div className="p-4 md:p-10">
-      <h1 className="mb-8 text-4xl font-extrabold text-white text-center">
+      <h1 className="mb-8 text-2xl md:text-4xl font-extrabold text-white text-center">
         💼 Experience
       </h1>
 
@@ -26,7 +26,7 @@ const ExperiencePage: React.FC<Props> = ({ experiences }) => {
               transition={{ duration: 0.7 }}
             >
               <div className="p-6 border border-gray-600 rounded-2xl shadow-xl bg-[#222a44] hover:scale-[1.02] transition-transform duration-300 h-full max-w-[500px]">
-                <h2 className="text-2xl font-bold text-white mb-4 text-center">
+                <h2 className="text-xl md:text-2xl font-bold text-white mb-4 text-center">
                   {exp.title}
                 </h2>
 

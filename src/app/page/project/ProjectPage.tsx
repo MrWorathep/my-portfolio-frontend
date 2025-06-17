@@ -25,7 +25,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ projects }) => {
 
   return (
     <div className="p-4 md:p-6 max-w-[1440px] mx-auto">
-      <h1 className="text-4xl font-extrabold text-white text-center mb-10">
+      <h1 className="text-2xl md:text-4xl font-extrabold text-white text-center mb-8">
         🚀 Projects
       </h1>
 
@@ -42,7 +42,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ projects }) => {
               transition={{ duration: 0.7 }}
             >
               <div className="bg-[#1f2640] border border-gray-600 rounded-2xl shadow-xl p-6 hover:scale-[1.02] transition-transform duration-300 text-white flex flex-col h-full">
-                <h2 className="text-2xl font-bold text-center mb-4">
+                <h2 className="text-xl md:text-2xl font-bold text-center mb-4">
                   {project.projectName}
                 </h2>
                 <p className="text-lg font-semibold">
@@ -77,7 +77,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ projects }) => {
                       เครื่องมือและเทคโนโลยีที่ใช้:
                     </span>
                     <span className="whitespace-pre-line break-words">
-                      {project.developmentDetails}
+                      {project.tools}
                     </span>
                   </div>
                 </div>

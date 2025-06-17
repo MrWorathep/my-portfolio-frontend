@@ -5,12 +5,19 @@ import Image from "next/image";
 const Home: React.FC = () => {
   return (
     <main className="mt-7 p-2 md:p-6 max-w-[1440px] mx-auto">
-      <h1 className="text-6xl font-semibold mt-3 mb-3 text-white">
+      <h1 className="text-3xl md:text-6xl font-semibold mt-3 mb-3 text-white">
+        <motion.div
+          className="inline-block origin-[70%_100%] pr-5"
+          animate={{ rotate: [-5, 15, -5] }}
+          transition={{ duration: 1, ease: "easeInOut", repeat: Infinity }}
+        >
+          👋
+        </motion.div>
         Hello, I&apos;m Worathep
       </h1>
       <div className="flex flex-wrap md:flex-nowrap m-1 gap-2">
         <motion.div
-          className="text-3xl p-3 leading-12 flex-1 min-w-[300px] text-gray-200"
+          className="text-xl md:text-3xl p-3 leading-12 flex-1 min-w-[300px] text-gray-200 break-words"
           initial={{ scale: 0 }}
           whileInView={{ scale: 1 }}
           transition={{ duration: 0.6 }}

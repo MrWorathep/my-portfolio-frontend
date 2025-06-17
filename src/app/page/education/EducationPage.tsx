@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const EducationPage: React.FC = () => {
   return (
     <div className="p-4 md:p-10 max-w-[1440px] mx-auto">
-      <h1 className="mb-8 text-4xl font-extrabold text-white text-center">
+      <h1 className="mb-8 text-2xl md:text-4xl font-extrabold text-white text-center">
         🎓 Education
       </h1>
 

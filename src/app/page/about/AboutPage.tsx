@@ -12,7 +12,9 @@ const AboutPage: React.FC = () => {
       >
         {/* About Me */}
         <div className="flex-1 p-6 border border-gray-600 rounded-2xl shadow-xl bg-[#222a44] hover:scale-[1.02] transition-transform duration-300">
-          <h1 className="mb-5 text-4xl font-extrabold text-white">About Me</h1>
+          <h1 className="mb-5 text-2xl md:text-4xl font-extrabold text-white">
+            🧑‍💻 About Me
+          </h1>
           <p className="text-gray-200">
             Hi! My name is
             <span className="font-semibold text-white">Worathep Thimasarn</span>
@@ -27,11 +29,13 @@ const AboutPage: React.FC = () => {
 
         {/* Hobbies */}
         <div className="flex-1 p-6 border border-gray-600 rounded-2xl shadow-xl bg-[#222a44] hover:scale-[1.02] transition-transform duration-300">
-          <h1 className="mb-5 text-4xl font-extrabold text-white">Hobbies</h1>
-          <ul className="list-disc pl-6 space-y-3 text-gray-200">
-            <li>Playing computer games</li>
-            <li>Watching movies and cartoons</li>
-          </ul>
+          <h1 className="mb-5 text-2xl md:text-4xl font-extrabold text-white">
+            🎯 Hobbies
+          </h1>
+          <div className="space-y-3 text-gray-200">
+            <div>🎮 Playing computer games</div>
+            <div>🎞️ Watching movies and cartoons</div>
+          </div>
         </div>
       </motion.div>
     </div>
