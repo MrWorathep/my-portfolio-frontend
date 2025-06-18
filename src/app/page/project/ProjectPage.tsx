@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Project } from "@/services/projectService";
 import { motion } from "framer-motion";
 import { FaPlay } from "react-icons/fa";
+import Linkify from "linkify-react";
 
 type ProjectPageProps = {
   projects: Project[];
@@ -49,7 +50,18 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ projects }) => {
                 <p className="text-lg font-semibold">
                   📄 รายละเอียดของโปรเจกต์ :
                 </p>
-                <p className="mb-4">{project.detail}</p>
+                <p className="mb-4 whitespace-pre-line">
+                  <Linkify
+                    options={{
+                      className:
+                        "text-gray-400 hover:text-blue-400 duration-300 underline",
+                      target: "_blank",
+                      rel: "noopener noreferrer",
+                    }}
+                  >
+                    {project.detail.split("\\n").join("\n")}
+                  </Linkify>
+                </p>
                 {project.images.length > 0 && (
                   <div className="w-full mt-4">
                     <div className="w-full aspect-video relative rounded-xl overflow-hidden mb-4">
