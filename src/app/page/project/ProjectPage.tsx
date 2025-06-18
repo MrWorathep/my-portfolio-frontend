@@ -5,6 +5,7 @@ import "yet-another-react-lightbox/styles.css";
 import Image from "next/image";
 import { Project } from "@/services/projectService";
 import { motion } from "framer-motion";
+import { FaPlay } from "react-icons/fa";
 
 type ProjectPageProps = {
   projects: Project[];
@@ -82,16 +83,24 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ projects }) => {
                   </div>
                 </div>
                 <div className="mt-auto pt-6">
-                  {project.images.length > 0 && (
-                    <div className="flex justify-center">
+                  <div className="flex justify-center">
+                    {!project.linkDemo ? (
                       <button
                         onClick={() => openLightbox(project.images)}
                         className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-all duration-300 cursor-pointer"
                       >
                         ดูรูปทั้งหมด ({project.images.length} รูป)
                       </button>
-                    </div>
-                  )}
+                    ) : (
+                      <button
+                        onClick={() => window.open(project.linkDemo, "_blank")}
+                        className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-all duration-300 cursor-pointer flex items-center justify-center gap-2"
+                      >
+                        <FaPlay />
+                        <div>Live Demo</div>
+                      </button>
+                    )}
+                  </div>
                 </div>
               </div>
             </motion.div>

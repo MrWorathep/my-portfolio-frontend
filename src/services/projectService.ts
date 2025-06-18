@@ -7,6 +7,7 @@ export type Project = {
   detail: string;
   role: string;
   tools: string;
+  linkDemo: string;
 };
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
