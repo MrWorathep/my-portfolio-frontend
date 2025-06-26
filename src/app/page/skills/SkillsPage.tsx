@@ -14,6 +14,7 @@ import {
   SiGithub,
 } from "react-icons/si";
 import { motion } from "framer-motion";
+import Card from "@/app/components/card";
 
 const skills = {
   programming: [
@@ -99,7 +100,7 @@ const SkillsPage: React.FC = () => {
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.7 }}
       >
-        <div className="bg-[#222a44] rounded-2xl border border-gray-600 shadow-xl p-8 hover:scale-[1.02] transition-transform duration-300">
+        <Card>
           {Object.entries(skills).map(([section, skillList], sectionIdx) => (
             <section key={sectionIdx} className="mb-10 last:mb-0">
               <h2 className="text-xl md:text-2xl font-bold text-white mb-6 capitalize">
@@ -165,7 +166,7 @@ const SkillsPage: React.FC = () => {
               </ul>
             </div>
           </section>
-        </div>
+        </Card>
       </motion.div>
     </main>
   );

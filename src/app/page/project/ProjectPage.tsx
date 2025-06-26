@@ -7,6 +7,7 @@ import { Project } from "@/services/projectService";
 import { motion } from "framer-motion";
 import { FaPlay } from "react-icons/fa";
 import Linkify from "linkify-react";
+import Card from "@/app/components/card";
 
 type ProjectPageProps = {
   projects: Project[];
@@ -43,78 +44,82 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ projects }) => {
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.7 }}
             >
-              <div className="bg-[#1f2640] border border-gray-600 rounded-2xl shadow-xl p-6 hover:scale-[1.02] transition-transform duration-300 text-white flex flex-col h-full">
-                <h2 className="text-xl md:text-2xl font-bold text-center mb-4">
-                  {project.projectName}
-                </h2>
-                <p className="text-lg font-semibold">
-                  📄 รายละเอียดของโปรเจกต์ :
-                </p>
-                <p className="mb-4 whitespace-pre-line">
-                  <Linkify
-                    options={{
-                      className:
-                        "text-gray-400 hover:text-blue-400 duration-300 underline",
-                      target: "_blank",
-                      rel: "noopener noreferrer",
-                    }}
-                  >
-                    {project.detail.split("\\n").join("\n")}
-                  </Linkify>
-                </p>
-                {project.images.length > 0 && (
-                  <div className="w-full mt-4">
-                    <div className="w-full aspect-video relative rounded-xl overflow-hidden mb-4">
-                      <Image
-                        src={project.images[0]}
-                        alt={project.projectName}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, 600px"
-                        loading="eager"
-                        priority
-                      />
+              <Card>
+                <div className="h-full flex flex-col">
+                  <h2 className="text-xl md:text-2xl font-bold text-center mb-4">
+                    {project.projectName}
+                  </h2>
+                  <p className="text-lg font-semibold">
+                    📄 รายละเอียดของโปรเจกต์ :
+                  </p>
+                  <p className="mb-4 whitespace-pre-line">
+                    <Linkify
+                      options={{
+                        className:
+                          "text-gray-400 hover:text-blue-400 duration-300 underline",
+                        target: "_blank",
+                        rel: "noopener noreferrer",
+                      }}
+                    >
+                      {project.detail.split("\\n").join("\n")}
+                    </Linkify>
+                  </p>
+                  {project.images.length > 0 && (
+                    <div className="w-full mt-4">
+                      <div className="w-full aspect-video relative rounded-xl overflow-hidden mb-4">
+                        <Image
+                          src={project.images[0]}
+                          alt={project.projectName}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, 600px"
+                          loading="eager"
+                          priority
+                        />
+                      </div>
+                    </div>
+                  )}
+                  <div className="mt-6">
+                    <p className="text-lg font-semibold mb-1">
+                      🔧 รายละเอียดการพัฒนา
+                    </p>
+                    <div className="mb-2 flex flex-wrap">
+                      <span className="font-semibold mr-2">บทบาทการทำงาน:</span>
+                      <span>{project.role}</span>
+                    </div>
+                    <div className="flex flex-wrap">
+                      <span className="font-semibold mr-2">
+                        เครื่องมือและเทคโนโลยีที่ใช้:
+                      </span>
+                      <span className="whitespace-pre-line break-words">
+                        {project.tools}
+                      </span>
                     </div>
                   </div>
-                )}
-                <div className="mt-6">
-                  <p className="text-lg font-semibold mb-1">
-                    🔧 รายละเอียดการพัฒนา
-                  </p>
-                  <div className="mb-2 flex flex-wrap">
-                    <span className="font-semibold mr-2">บทบาทการทำงาน:</span>
-                    <span>{project.role}</span>
-                  </div>
-                  <div className="flex flex-wrap">
-                    <span className="font-semibold mr-2">
-                      เครื่องมือและเทคโนโลยีที่ใช้:
-                    </span>
-                    <span className="whitespace-pre-line break-words">
-                      {project.tools}
-                    </span>
-                  </div>
-                </div>
-                <div className="mt-auto pt-6">
-                  <div className="flex justify-center">
-                    {!project.linkDemo ? (
-                      <button
-                        onClick={() => openLightbox(project.images)}
-                        className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-all duration-300 cursor-pointer"
-                      >
-                        ดูรูปทั้งหมด ({project.images.length} รูป)
-                      </button>
-                    ) : (
-                      <button
-                        onClick={() => window.open(project.linkDemo, "_blank")}
-                        className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-all duration-300 cursor-pointer flex items-center justify-center gap-2"
-                      >
-                        <FaPlay />
-                        <div>Live Demo</div>
-                      </button>
-                    )}
+                  <div className="mt-auto pt-6">
+                    <div className="flex justify-center">
+                      {!project.linkDemo ? (
+                        <button
+                          onClick={() => openLightbox(project.images)}
+                          className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-all duration-300 cursor-pointer"
+                        >
+                          ดูรูปทั้งหมด ({project.images.length} รูป)
+                        </button>
+                      ) : (
+                        <button
+                          onClick={() =>
+                            window.open(project.linkDemo, "_blank")
+                          }
+                          className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-all duration-300 cursor-pointer flex items-center justify-center gap-2"
+                        >
+                          <FaPlay />
+                          <div>Live Demo</div>
+                        </button>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Card>
             </motion.div>
           ))}
       </div>

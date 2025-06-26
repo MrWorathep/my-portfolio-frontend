@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Card from "@/app/components/card";
 
 const EducationPage: React.FC = () => {
   return (
@@ -18,7 +19,7 @@ const EducationPage: React.FC = () => {
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.7 }}
         >
-          <div className="p-6 border border-gray-600 rounded-2xl shadow-xl bg-[#222a44] hover:scale-[1.02] transition-transform duration-300 h-full">
+          <Card>
             <div className="w-full flex justify-center mb-4">
               <div className="w-[200px] h-[200px]">
                 <Image
@@ -40,7 +41,7 @@ const EducationPage: React.FC = () => {
               <div>(2019 - 2023)</div>
               <div>GPA: 2.88</div>
             </div>
-          </div>
+          </Card>
         </motion.div>
 
         {/* Warin Chamrap NFE */}
@@ -50,7 +51,7 @@ const EducationPage: React.FC = () => {
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.7 }}
         >
-          <div className="p-6 border border-gray-600 rounded-2xl shadow-xl bg-[#222a44] hover:scale-[1.02] transition-transform duration-300 h-full">
+          <Card>
             <div className="w-full flex justify-center mb-4">
               <div className="w-[200px] h-[200px]">
                 <Image
@@ -72,7 +73,7 @@ const EducationPage: React.FC = () => {
               <div>(2017 - 2019)</div>
               <div>GPA: 2.05</div>
             </div>
-          </div>
+          </Card>
         </motion.div>
       </div>
     </div>
