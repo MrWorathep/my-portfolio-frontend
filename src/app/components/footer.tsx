@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
               href="mailto:worathep123@gmail.com"
               className="hover:underline hover:text-blue-400 duration-300"
             >
-              worathep123@gmail.com
+              worathep.thim@gmail.com
             </a>
           </p>
           <p className="flex justify-center items-center gap-2 mt-2">
