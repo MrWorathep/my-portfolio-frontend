@@ -32,20 +32,19 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ projects }) => {
         🚀 Projects
       </h1>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
+      <div className="flex flex-wrap gap-6 justify-center">
         {projects
           .slice()
           .reverse()
           .map((project) => (
             <motion.div
               key={project._id}
-              className="h-full"
               initial={{ x: -200, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.7 }}
             >
               <Card>
-                <div className="h-full flex flex-col">
+                <div className="max-w-[614px] flex flex-col h-full">
                   <h2 className="text-xl md:text-2xl font-bold text-center mb-4">
                     {project.projectName}
                   </h2>
