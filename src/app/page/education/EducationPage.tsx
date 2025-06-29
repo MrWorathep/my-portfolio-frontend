@@ -2,11 +2,11 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Card from "@/app/components/card";
+import Card from "@/app/components/Card";
 
 const EducationPage: React.FC = () => {
   return (
-    <div className="p-4 md:p-10 max-w-[1440px] mx-auto">
+    <div className="p-4 md:p-10">
       <h1 className="mb-8 text-2xl md:text-4xl font-extrabold text-white text-center">
         🎓 Education
       </h1>

@@ -7,7 +7,7 @@ import { Project } from "@/services/projectService";
 import { motion } from "framer-motion";
 import { FaPlay } from "react-icons/fa";
 import Linkify from "linkify-react";
-import Card from "@/app/components/card";
+import Card from "@/app/components/Card";
 
 type ProjectPageProps = {
   projects: Project[];
@@ -27,7 +27,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ projects }) => {
   }
 
   return (
-    <div className="p-4 md:p-6 max-w-[1440px] mx-auto">
+    <div className="p-4 md:p-6">
       <h1 className="text-2xl md:text-4xl font-extrabold text-white text-center mb-8">
         🚀 Projects
       </h1>

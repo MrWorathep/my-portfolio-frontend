@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { Experience } from "@/services/experienceService";
 import { motion } from "framer-motion";
-import Card from "@/app/components/card";
+import Card from "@/app/components/Card";
 
 type Props = {
   experiences: Experience[];

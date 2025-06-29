@@ -14,7 +14,7 @@ import {
   SiGithub,
 } from "react-icons/si";
 import { motion } from "framer-motion";
-import Card from "@/app/components/card";
+import Card from "@/app/components/Card";
 
 const skills = {
   programming: [

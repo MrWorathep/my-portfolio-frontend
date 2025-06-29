@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import HomePage from "./page/home/HomePage";
-import NavBar from "./components/navBar";
+import NavBar from "./components/Navbar";
 import ProjectPage from "./page/project/ProjectPage";
 import AboutPage from "./page/about/AboutPage";
 import SkillsPage from "./page/skills/SkillsPage";
@@ -9,7 +9,8 @@ import ExperiencePage from "./page/experience/ExperiencePage";
 import EducationPage from "./page/education/EducationPage";
 import { fetchProjects, Project } from "@/services/projectService";
 import { fetchExperiences, Experience } from "@/services/experienceService";
-import Footer from "./components/footer";
+import Footer from "./components/Footer";
+import Container from "./components/Container";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -39,31 +40,33 @@ export default function Home() {
   }
 
   return (
-    <div className="w-full">
-      <div className="pt-6 sm:pt-12">
-        <NavBar />
-        <div id="home" className="pt-12">
-          <HomePage />
-        </div>
-        <div id="project" className="pt-12">
-          <ProjectPage projects={projects} />
-        </div>
-        <div id="skills" className="pt-12">
-          <SkillsPage />
-        </div>
-        <div id="about" className="pt-12">
-          <AboutPage />
-        </div>
-        <div id="experience" className="pt-12">
-          <ExperiencePage experiences={experiences} />
-        </div>
-        <div id="education" className="pt-12">
-          <EducationPage />
-        </div>
-        <div id="contract">
-          <Footer />
+    <Container>
+      <div className="w-full">
+        <div className="pt-6 sm:pt-12">
+          <NavBar />
+          <div id="home" className="pt-12">
+            <HomePage />
+          </div>
+          <div id="project" className="pt-12">
+            <ProjectPage projects={projects} />
+          </div>
+          <div id="skills" className="pt-12">
+            <SkillsPage />
+          </div>
+          <div id="about" className="pt-12">
+            <AboutPage />
+          </div>
+          <div id="experience" className="pt-12">
+            <ExperiencePage experiences={experiences} />
+          </div>
+          <div id="education" className="pt-12">
+            <EducationPage />
+          </div>
+          <div id="contract">
+            <Footer />
+          </div>
         </div>
       </div>
-    </div>
+    </Container>
   );
 }

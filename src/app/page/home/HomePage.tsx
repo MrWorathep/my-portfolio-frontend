@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Home: React.FC = () => {
   return (
-    <main className="mt-7 p-2 md:p-6 max-w-[1440px] mx-auto">
+    <main className="mt-7 p-2 md:p-6">
       <h1 className="text-3xl md:text-6xl font-semibold mt-3 mb-3 text-white">
         <motion.div
           className="inline-block origin-[70%_100%] pr-5"

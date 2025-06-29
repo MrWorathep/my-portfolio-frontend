@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import Card from "@/app/components/card";
+import Card from "@/app/components/Card";
 const AboutPage: React.FC = () => {
   return (
     <div className="p-4 md:p-10">
