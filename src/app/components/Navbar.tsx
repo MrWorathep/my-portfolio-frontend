@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import classNames from "classnames";
 import Container from "./Container";
 
-const NavBar: React.FC = () => {
+const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -137,4 +137,4 @@ const NavBar: React.FC = () => {
   );
 };
 
-export default NavBar;
+export default Navbar;

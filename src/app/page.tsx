@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
 import HomePage from "./page/home/HomePage";
-import NavBar from "./components/Navbar";
 import ProjectPage from "./page/project/ProjectPage";
 import AboutPage from "./page/about/AboutPage";
 import SkillsPage from "./page/skills/SkillsPage";
@@ -9,8 +8,9 @@ import ExperiencePage from "./page/experience/ExperiencePage";
 import EducationPage from "./page/education/EducationPage";
 import { fetchProjects, Project } from "@/services/projectService";
 import { fetchExperiences, Experience } from "@/services/experienceService";
-import Footer from "./components/Footer";
 import Container from "./components/Container";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -43,7 +43,7 @@ export default function Home() {
     <Container>
       <div className="w-full">
         <div className="pt-6 sm:pt-12">
-          <NavBar />
+          <Navbar />
           <div id="home" className="pt-12">
             <HomePage />
           </div>
