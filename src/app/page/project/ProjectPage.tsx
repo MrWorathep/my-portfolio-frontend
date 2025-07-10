@@ -14,7 +14,7 @@ type ProjectPageProps = {
 };
 
 const ProjectPage: React.FC<ProjectPageProps> = ({ projects }) => {
-  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxOpen, setLightboxOpen] = useState<boolean>(false);
   const [lightboxImages, setLightboxImages] = useState<{ src: string }[]>([]);
 
   const openLightbox = (images: string[]) => {
@@ -28,11 +28,11 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ projects }) => {
 
   return (
     <div className="p-4 md:p-6">
-      <h1 className="text-2xl md:text-4xl font-extrabold text-white text-center mb-8">
+      <h1 className="text-2xl md:text-4xl font-extrabold text-center mb-8 text-gray-900 dark:text-gray-100">
         🚀 Projects
       </h1>
 
-      <div className="flex flex-wrap gap-6 justify-center">
+      <div className="flex flex-wrap gap-6 justify-center text-gray-700 dark:text-gray-300">
         {projects
           .slice()
           .reverse()
@@ -45,7 +45,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ projects }) => {
             >
               <Card>
                 <div className="max-w-[614px] flex flex-col h-full">
-                  <h2 className="text-xl md:text-2xl font-bold text-center mb-4">
+                  <h2 className="text-xl md:text-2xl font-bold text-center mb-4 text-gray-900 dark:text-gray-100">
                     {project.projectName}
                   </h2>
                   <p className="text-lg font-semibold">
@@ -55,7 +55,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ projects }) => {
                     <Linkify
                       options={{
                         className:
-                          "text-gray-400 hover:text-blue-400 duration-300 underline",
+                          "text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 duration-300 underline",
                         target: "_blank",
                         rel: "noopener noreferrer",
                       }}
@@ -100,7 +100,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ projects }) => {
                       {!project.linkDemo ? (
                         <button
                           onClick={() => openLightbox(project.images)}
-                          className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-all duration-300 cursor-pointer"
+                          className="px-4 py-2 rounded-lg transition-all duration-300 cursor-pointer bg-blue-500 hover:bg-blue-600"
                         >
                           ดูรูปทั้งหมด ({project.images.length} รูป)
                         </button>
@@ -109,7 +109,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ projects }) => {
                           onClick={() =>
                             window.open(project.linkDemo, "_blank")
                           }
-                          className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-all duration-300 cursor-pointer flex items-center justify-center gap-2"
+                          className="px-4 py-2 rounded-lg transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 bg-blue-500 hover:bg-blue-600"
                         >
                           <FaPlay />
                           <div>Live Demo</div>

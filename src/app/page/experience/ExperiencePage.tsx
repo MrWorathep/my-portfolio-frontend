@@ -10,8 +10,8 @@ type Props = {
 
 const ExperiencePage: React.FC<Props> = ({ experiences }) => {
   return (
-    <div className="p-4 md:p-10">
-      <h1 className="mb-8 text-2xl md:text-4xl font-extrabold text-white text-center">
+    <div className="p-4 md:p-10 text-gray-900 dark:text-gray-100">
+      <h1 className="mb-8 text-2xl md:text-4xl font-extrabold text-center">
         💼 Experience
       </h1>
 
@@ -28,7 +28,7 @@ const ExperiencePage: React.FC<Props> = ({ experiences }) => {
             >
               <Card>
                 <div className="max-w-[500px]">
-                  <h2 className="text-xl md:text-2xl font-bold text-white mb-4 text-center">
+                  <h2 className="text-xl md:text-2xl font-bold mb-4 text-center">
                     {exp.title}
                   </h2>
 
@@ -43,9 +43,9 @@ const ExperiencePage: React.FC<Props> = ({ experiences }) => {
                     />
                   </div>
 
-                  <div className="text-gray-200 text-base leading-7 space-y-2 text-left">
+                  <div className="text-base leading-7 space-y-2 text-left">
                     <div className="flex flex-wrap gap-2 items-center">
-                      <span className="font-semibold text-white">
+                      <span className="font-semibold text-gray-700 dark:text-gray-300">
                         📌 Position:
                       </span>
                       <span>
@@ -54,11 +54,13 @@ const ExperiencePage: React.FC<Props> = ({ experiences }) => {
                     </div>
 
                     <div className="flex flex-wrap gap-2">
-                      <span className="font-semibold text-white">📅 Year:</span>
+                      <span className="font-semibold text-gray-700 dark:text-gray-300">
+                        📅 Year:
+                      </span>
                       <span>{exp.year}</span>
                     </div>
 
-                    <div className="text-white">
+                    <div className="text-gray-700 dark:text-gray-300">
                       <span className="font-semibold">📝 Description:</span>
                       <ul className="list-disc pl-5 mt-1">
                         {exp.description.map((des, i) => (

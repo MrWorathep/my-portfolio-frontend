@@ -39,7 +39,7 @@ const skills = {
       icon: (
         <>
           <SiReact className="w-6 h-6 text-cyan-400" />
-          <SiNextdotjs className="w-6 h-6 text-white" />
+          <SiNextdotjs className="w-6 h-6 text-gray-900 dark:text-gray-100" />
         </>
       ),
       label: "React.js (Next.js)",
@@ -82,7 +82,7 @@ const skills = {
   ],
   tools: [
     {
-      icon: <SiGithub className="w-6 h-6 text-white" />,
+      icon: <SiGithub className="w-6 h-6 text-gray-900 dark:text-gray-100" />,
       label: "Git / GitHub",
       level: "70%",
     },
@@ -91,8 +91,8 @@ const skills = {
 
 const SkillsPage: React.FC = () => {
   return (
-    <main className="p-4 md:p-10 max-w-5xl mx-auto">
-      <h1 className="text-2xl md:text-4xl font-extrabold text-white text-center mb-8">
+    <main className="p-4 md:p-10 max-w-5xl mx-auto text-gray-900 dark:text-gray-100">
+      <h1 className="text-2xl md:text-4xl font-extrabold text-center mb-8">
         🛠 Skills
       </h1>
       <motion.div
@@ -103,18 +103,18 @@ const SkillsPage: React.FC = () => {
         <Card>
           {Object.entries(skills).map(([section, skillList], sectionIdx) => (
             <section key={sectionIdx} className="mb-10 last:mb-0">
-              <h2 className="text-xl md:text-2xl font-bold text-white mb-6 capitalize">
+              <h2 className="text-xl md:text-2xl font-bold mb-6 capitalize">
                 {section}
               </h2>
 
-              <div className="flex flex-col gap-3 w-full">
+              <div className="flex flex-col gap-3 w-full text-gray-700 dark:text-gray-300">
                 {skillList.map((skill, idx) => (
                   <div key={idx} className="flex items-center gap-4 flex-wrap">
                     <div className="flex items-center gap-2 min-w-[200px]">
                       {skill.icon}
-                      <span className="text-white">{skill.label}</span>
+                      <span>{skill.label}</span>
                     </div>
-                    <div className="bg-white/20 rounded-xl flex-grow h-5 min-w-[200px]">
+                    <div className="bg-black/20 dark:bg-white/20 rounded-xl flex-grow h-5 min-w-[200px]">
                       <div
                         className="h-full rounded-xl bg-cyan-400/80 transition-all duration-500"
                         style={{ width: skill.level }}
@@ -127,8 +127,8 @@ const SkillsPage: React.FC = () => {
           ))}
 
           {/* Soft Skills, Languages, Software Tools */}
-          <section className="flex flex-wrap gap-8">
-            <div className="flex-1 min-w-[250px] bg-[#1f2640] p-6 rounded-xl border border-gray-600 text-white">
+          <section className="flex flex-wrap gap-8 text-gray-700 dark:text-gray-300">
+            <div className="flex-1 min-w-[250px] bg-light-background-soft-card dark:bg-dark-background-soft-card p-6 rounded-xl border border-gray-300 dark:border-gray-600">
               <h3 className="text-xl md:text-2xl font-semibold mb-4">
                 🤝 Soft Skills
               </h3>
@@ -140,7 +140,7 @@ const SkillsPage: React.FC = () => {
               </ul>
             </div>
 
-            <div className="flex-1 min-w-[250px] bg-[#1f2640] p-6 rounded-xl border border-gray-600 text-white">
+            <div className="flex-1 min-w-[250px] bg-light-background-soft-card dark:bg-dark-background-soft-card p-6 rounded-xl border border-gray-300 dark:border-gray-600">
               <h3 className="text-xl md:text-2xl font-semibold mb-4">
                 🌐 Languages
               </h3>
@@ -156,7 +156,7 @@ const SkillsPage: React.FC = () => {
               </ul>
             </div>
 
-            <div className="flex-1 min-w-[250px] bg-[#1f2640] p-6 rounded-xl border border-gray-600 text-white">
+            <div className="flex-1 min-w-[250px] bg-light-background-soft-card dark:bg-dark-background-soft-card p-6 rounded-xl border border-gray-300 dark:border-gray-600">
               <h3 className="text-xl md:text-2xl font-semibold mb-4">
                 🧰 Software Tools
               </h3>

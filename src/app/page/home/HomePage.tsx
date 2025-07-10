@@ -5,7 +5,7 @@ import Image from "next/image";
 const Home: React.FC = () => {
   return (
     <main className="mt-7 p-2 md:p-6">
-      <h1 className="text-3xl md:text-6xl font-semibold mt-3 mb-3 text-white">
+      <h1 className="text-3xl md:text-6xl font-semibold mt-3 mb-3 text-gray-900 dark:text-gray-100">
         <motion.div
           className="inline-block origin-[70%_100%] pr-5"
           animate={{ rotate: [-5, 15, -5] }}
@@ -17,7 +17,7 @@ const Home: React.FC = () => {
       </h1>
       <div className="flex flex-wrap md:flex-nowrap m-1 gap-2">
         <motion.div
-          className="text-xl md:text-3xl p-3 leading-12 flex-1 min-w-[300px] text-gray-200 break-words"
+          className="text-xl md:text-3xl p-3 leading-12 flex-1 min-w-[300px] break-words text-gray-700 dark:text-gray-300"
           initial={{ scale: 0 }}
           whileInView={{ scale: 1 }}
           transition={{ duration: 0.6 }}

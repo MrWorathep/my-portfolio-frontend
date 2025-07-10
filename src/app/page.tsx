@@ -11,9 +11,10 @@ import { fetchExperiences, Experience } from "@/services/experienceService";
 import Container from "./components/Container";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Theme from "./components/Theme";
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   const [projects, setProjects] = useState<Project[]>([]);
   const [experiences, setExperiences] = useState<Experience[]>([]);
 
@@ -40,33 +41,36 @@ export default function Home() {
   }
 
   return (
-    <Container>
-      <div className="w-full">
-        <div className="pt-6 sm:pt-12">
-          <Navbar />
-          <div id="home" className="pt-12">
-            <HomePage />
-          </div>
-          <div id="project" className="pt-12">
-            <ProjectPage projects={projects} />
-          </div>
-          <div id="skills" className="pt-12">
-            <SkillsPage />
-          </div>
-          <div id="about" className="pt-12">
-            <AboutPage />
-          </div>
-          <div id="experience" className="pt-12">
-            <ExperiencePage experiences={experiences} />
-          </div>
-          <div id="education" className="pt-12">
-            <EducationPage />
-          </div>
-          <div id="contract">
-            <Footer />
+    <main className="bg-light-background dark:bg-dark-background">
+      <Navbar />
+      <Theme />
+      <Container>
+        <div className="w-full">
+          <div className="pt-6 sm:pt-12">
+            <div id="home" className="pt-12">
+              <HomePage />
+            </div>
+            <div id="project" className="pt-12">
+              <ProjectPage projects={projects} />
+            </div>
+            <div id="skills" className="pt-12">
+              <SkillsPage />
+            </div>
+            <div id="about" className="pt-12">
+              <AboutPage />
+            </div>
+            <div id="experience" className="pt-12">
+              <ExperiencePage experiences={experiences} />
+            </div>
+            <div id="education" className="pt-12">
+              <EducationPage />
+            </div>
           </div>
         </div>
+      </Container>
+      <div id="contract">
+        <Footer />
       </div>
-    </Container>
+    </main>
   );
 }

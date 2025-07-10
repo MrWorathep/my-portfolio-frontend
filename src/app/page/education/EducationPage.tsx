@@ -7,7 +7,7 @@ import Card from "@/app/components/Card";
 const EducationPage: React.FC = () => {
   return (
     <div className="p-4 md:p-10">
-      <h1 className="mb-8 text-2xl md:text-4xl font-extrabold text-white text-center">
+      <h1 className="mb-8 text-2xl md:text-4xl font-extrabold text-gray-900 dark:text-gray-100 text-center">
         🎓 Education
       </h1>
 
@@ -32,8 +32,8 @@ const EducationPage: React.FC = () => {
                 />
               </div>
             </div>
-            <div className="text-gray-200 space-y-1 text-base leading-7 text-center">
-              <div className="font-semibold text-lg text-white">
+            <div className="text-gray-700 dark:text-gray-300 space-y-1 text-base leading-7 text-center">
+              <div className="font-semibold text-lg text-gray-900 dark:text-gray-100">
                 Bachelor of Science in Computer Science
               </div>
               <div>Department of Information Technology and Innovation</div>
@@ -65,8 +65,8 @@ const EducationPage: React.FC = () => {
                 />
               </div>
             </div>
-            <div className="text-gray-200 space-y-1 text-base leading-7 text-center">
-              <div className="font-semibold text-lg text-white">
+            <div className="text-gray-700 dark:text-gray-300 space-y-1 text-base leading-7 text-center">
+              <div className="font-semibold text-lg text-gray-900 dark:text-gray-100">
                 Warin Chamrap District NFE Center
               </div>
               <div>Upper Secondary Level</div>
