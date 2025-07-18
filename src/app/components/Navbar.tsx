@@ -1,21 +1,12 @@
 import React, { useState } from "react";
 import classNames from "classnames";
 import Container from "./Container";
-import { useTheme } from "next-themes";
 
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
-  const { theme } = useTheme();
 
   return (
-    <header
-      className={classNames(
-        "fixed top-0 left-0 right-0 w-screen z-50 shadow-md py-6 px-10 border-b",
-        theme === "light"
-          ? "bg-neutral-200 text-gray-900 border-gray-300"
-          : "bg-neutral-900 text-gray-300 border-neutral-800"
-      )}
-    >
+    <header className="fixed top-0 left-0 right-0 w-screen z-50 shadow-md py-6 px-10 border-b bg-neutral-200 text-gray-900 border-gray-300 dark:bg-neutral-900 dark:text-gray-300 dark:border-neutral-800">
       <Container>
         <div className="flex justify-between items-center w-full">
           {/* Logo */}
@@ -78,7 +69,7 @@ const Navbar: React.FC = () => {
               {!menuOpen ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6"
+                  className="w-6 h-6 hover:text-blue-500 dark:hover:text-blue-400 transition"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -93,7 +84,7 @@ const Navbar: React.FC = () => {
               ) : (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6"
+                  className="w-6 h-6 hover:text-blue-500 dark:hover:text-blue-400 transition"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"

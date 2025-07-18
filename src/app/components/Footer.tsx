@@ -1,20 +1,10 @@
 import React from "react";
 import { SiGithub, SiFacebook, SiGmail } from "react-icons/si";
 import { FaFilePdf, FaMobileAlt } from "react-icons/fa";
-import { useTheme } from "next-themes";
-import classNames from "classnames";
 
 const Footer: React.FC = () => {
-  const { theme } = useTheme();
   return (
-    <footer
-      className={classNames(
-        "py-6 mt-12 border-t",
-        theme === "light"
-          ? "bg-neutral-200 text-gray-900 border-gray-300"
-          : "bg-neutral-900 text-gray-300 border-neutral-800"
-      )}
-    >
+    <footer className="py-6 mt-12 border-t bg-neutral-200 text-gray-900 border-gray-300 dark:bg-neutral-900 dark:text-gray-300 dark:border-neutral-800">
       <div className="max-w-4xl mx-auto px-4 text-center text-sm sm:text-base">
         {/* Contact Section */}
         <div className="mb-4">

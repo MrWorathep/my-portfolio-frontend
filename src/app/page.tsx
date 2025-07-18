@@ -34,7 +34,7 @@ export default function Home() {
 
   if (isLoading) {
     return (
-      <div className="flex items-center justify-center min-h-screen">
+      <div className="flex items-center justify-center min-h-screen bg-light-background dark:bg-dark-background">
         <div className="w-16 h-16 border-4 border-blue-300 border-t-blue-500 rounded-full animate-spin" />
       </div>
     );
