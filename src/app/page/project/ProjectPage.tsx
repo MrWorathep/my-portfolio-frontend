@@ -22,16 +22,8 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ projects }) => {
     setLightboxOpen(true);
   };
 
-  if (!projects.length) {
-    return <div className="text-white">ยังไม่มีโปรเจกต์</div>;
-  }
-
   return (
     <div className="p-4 md:p-6">
-      <h1 className="text-2xl md:text-4xl font-extrabold text-center mb-8 text-gray-900 dark:text-gray-100">
-        🚀 Projects
-      </h1>
-
       <div className="flex flex-wrap gap-6 justify-center text-gray-700 dark:text-gray-300">
         {projects
           .slice()

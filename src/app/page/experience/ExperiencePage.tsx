@@ -11,10 +11,6 @@ type Props = {
 const ExperiencePage: React.FC<Props> = ({ experiences }) => {
   return (
     <div className="p-4 md:p-10 text-gray-900 dark:text-gray-100">
-      <h1 className="mb-8 text-2xl md:text-4xl font-extrabold text-center">
-        💼 Experience
-      </h1>
-
       <div className="flex flex-wrap justify-center gap-6">
         {experiences
           .slice()

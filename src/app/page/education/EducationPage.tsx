@@ -7,10 +7,6 @@ import Card from "@/app/components/Card";
 const EducationPage: React.FC = () => {
   return (
     <div className="p-4 md:p-10">
-      <h1 className="mb-8 text-2xl md:text-4xl font-extrabold text-gray-900 dark:text-gray-100 text-center">
-        🎓 Education
-      </h1>
-
       <div className="flex flex-wrap gap-6 justify-center">
         {/* Bangkok University */}
         <motion.div
