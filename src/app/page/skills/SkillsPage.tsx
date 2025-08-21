@@ -92,6 +92,9 @@ const skills = {
 const SkillsPage: React.FC = () => {
   return (
     <main className="p-4 md:p-10 max-w-5xl mx-auto text-gray-900 dark:text-gray-100">
+      <h1 className="text-2xl md:text-4xl font-extrabold text-center mb-8">
+        🛠 Skills
+      </h1>
       <motion.div
         initial={{ x: -200, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}

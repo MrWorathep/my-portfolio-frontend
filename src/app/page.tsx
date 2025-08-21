@@ -1,38 +1,16 @@
 "use client";
-import { useEffect, useState } from "react";
 import HomePage from "./page/home/HomePage";
 import ProjectPage from "./page/project/ProjectPage";
 import AboutPage from "./page/about/AboutPage";
 import SkillsPage from "./page/skills/SkillsPage";
 import ExperiencePage from "./page/experience/ExperiencePage";
 import EducationPage from "./page/education/EducationPage";
-import { fetchProjects, Project } from "@/services/projectService";
-import { fetchExperiences, Experience } from "@/services/experienceService";
 import Container from "./components/Container";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Theme from "./components/Theme";
-import Loading from "./components/Loading";
+
 export default function Home() {
-  const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [experiences, setExperiences] = useState<Experience[]>([]);
-  useEffect(() => {
-    async function loadData() {
-      setIsLoading(true);
-      const [projectsData, experiencesData] = await Promise.all([
-        fetchProjects(),
-        fetchExperiences(),
-      ]);
-      setProjects(projectsData);
-      setExperiences(experiencesData);
-      setIsLoading(false);
-    }
-    loadData();
-  }, []);
-  if (isLoading) {
-    return <Loading />;
-  }
   return (
     <main className="bg-light-background dark:bg-dark-background">
       <Navbar />
@@ -44,7 +22,7 @@ export default function Home() {
               <HomePage />
             </div>
             <div id="project" className="pt-12">
-              <ProjectPage projects={projects} />
+              <ProjectPage />
             </div>
             <div id="skills" className="pt-12">
               <SkillsPage />
@@ -53,7 +31,7 @@ export default function Home() {
               <AboutPage />
             </div>
             <div id="experience" className="pt-12">
-              <ExperiencePage experiences={experiences} />
+              <ExperiencePage />
             </div>
             <div id="education" className="pt-12">
               <EducationPage />

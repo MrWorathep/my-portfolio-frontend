@@ -1,12 +1,21 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import classNames from "classnames";
 
 const Theme: React.FC = () => {
   const { theme, setTheme, systemTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
   const currentTheme = theme === "system" ? systemTheme : theme;
+
   return (
     <div className="fixed top-1/2 right-0 z-50">
       <button
